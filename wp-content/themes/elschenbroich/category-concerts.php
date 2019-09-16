@@ -22,6 +22,9 @@
 			'order'				=> 'ASC'
 		));
 
+		// reverse order (display latest concert first)
+		$posts = array_reverse($posts);
+
 		if( $posts ): ?>
 			<?php foreach( $posts as $post ):
 				setup_postdata( $post ); ?>
