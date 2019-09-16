@@ -1,0 +1,807 @@
+/*
+Theme Name: Leonard Elschenbroich
+Author: design: Stahl R, code: Thibault Brevet
+Author URI: stahl-r.de, thibault.io
+Text Domain: elschenbroich
+*/
+
+@font-face {
+	font-family: 'GT-Sectra-Book';
+	font-weight: normal;
+	src:	url('webfonts/GT-Sectra-Book.woff') format('woff'),
+			url('webfonts/GT-Sectra-Book.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'GT-Sectra-Book-Italic';
+	font-weight: normal;
+	src:	url('webfonts/GT-Sectra-Book-Italic.woff') format('woff'),
+			url('webfonts/GT-Sectra-Book-Italic.ttf') format('truetype');
+}
+
+/*
+ * DEFAULTS
+ */
+
+html, body {
+	margin: 0;
+	padding: 0;
+	font-family: 'GT-Sectra-Book';
+	min-height: 100%;
+	-webkit-font-smoothing: subpixel-antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-text-size-adjust: 100%;
+}
+
+em {
+	font-style: normal;
+	font-family: 'GT-Sectra-Book-Italic';
+}
+
+a:link {
+	text-decoration: none;
+	color: #000;
+}
+
+a:visited {
+	color: #000;
+}
+
+a:hover {
+	text-decoration: underline;;
+}
+
+h2 {
+	font-size: 1.25em;
+}
+
+/*
+ * WRAPPER
+ */
+
+.main-wrapper {
+	position: relative;
+	max-width: 1600px;
+	min-height: 100%;
+	margin: 0 auto;
+	overflow: auto;
+}
+
+/*
+ * MENU
+ */
+
+.menu-wrapper {
+	position: fixed;
+	top: 2em;
+	left: 2.5em;
+	padding: 1.5em 1em 0.5em;
+	width: 264px;
+	background-color: rgb(255, 162, 0);
+	box-sizing: border-box;
+	z-index: 10;
+}
+
+.menu-wrapper .border-wrapper {
+	margin-bottom: 1em;
+	padding: 1em 0 2em;
+	border-top: 1px solid #000;
+	border-bottom: 1px solid #000;
+}
+
+.menu-wrapper .border-wrapper .name {
+	position: relative;
+}
+
+.menu-wrapper .border-wrapper .toggle {
+	display: none;
+}
+
+.menu-wrapper a:link {
+	font-size: 1.25em;
+	line-height: 1.2em;
+}
+
+.menu-wrapper a:hover {
+	color: #fff;
+	text-decoration: none;
+}
+
+.menu-wrapper ul a:link {
+	font-family: 'GT-Sectra-Book-Italic';
+}
+
+.menu-wrapper ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.menu-wrapper ul li ul {
+	display: none;
+}
+
+.menu-wrapper ul li ul {
+	padding-left: 1em;
+}
+
+.menu-wrapper ul li:hover ul {
+	display: block;
+}
+
+.menu-wrapper .lang {
+	margin-bottom: 1em;
+}
+
+.menu-wrapper .lang a:link {
+	font-family: 'GT-Sectra-Book-Italic';
+}
+
+.menu-wrapper .lang a.active {
+	color: #fff;
+}
+
+.menu-wrapper .social-icon {
+	width: 32px;
+	height: 32px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	display: inline-block;
+}
+
+.menu-wrapper .social-icon:hover {
+	cursor: pointer;
+}
+
+.menu-wrapper .social-twitter {
+	background-image: url('assets/social-twitter-black.png');
+}
+
+.menu-wrapper .social-twitter:hover {
+	background-image: url('assets/social-twitter-white.png');
+}
+
+.menu-wrapper .social-facebook {
+	background-image: url('assets/social-facebook-black.png');
+}
+
+.menu-wrapper .social-facebook:hover {
+	background-image: url('assets/social-facebook-white.png');
+}
+
+.menu-wrapper .social-itunes {
+	background-image: url('assets/social-itunes-black.png');
+}
+
+.menu-wrapper .social-itunes:hover {
+	background-image: url('assets/social-itunes-white.png');
+}
+/*
+ * HERO
+ */
+
+.hero {
+	position: relative;
+	height: 808px;
+}
+
+.hero .image-wrapper {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	width: 100%;
+	height: 808px;
+}
+
+.hero .left {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 50%;
+	height: 100%;
+}
+
+.hero .left:hover {
+	cursor: w-resize;
+}
+
+.hero .right {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 50%;
+	height: 100%;
+}
+
+.hero .right:hover {
+	cursor: e-resize;
+}
+
+.hero .controls {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	padding: 2.5em 1.5em;
+	padding-left: 328px;
+	box-sizing: border-box;
+}
+
+.hero .controls .controls-wrapper {
+	color: #fff;
+	text-align: center;
+	font-family: 'GT-Sectra-Book-Italic';
+	font-size: 3.75em;
+	border-top: solid 1px #fff;
+}
+
+.hero .controls .controls-wrapper a:link,
+.hero .controls .controls-wrapper a:visited {
+	color: #fff;
+}
+
+.hero .controls .controls-wrapper a:hover {
+	opacity: 0.5;
+	text-decoration: none;
+}
+
+.hero .controls .controls-wrapper .pills {
+	margin-top: 1rem;
+	line-height: 0;
+}
+
+.hero .controls .controls-wrapper .pills .pill {
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	background-color: #fff;
+	opacity: 0.5;
+	border-radius: 8px;
+}
+
+.hero .controls .controls-wrapper .pills .pill:hover {
+	opacity: 1.0;
+	cursor: pointer;
+}
+
+.hero .controls .controls-wrapper .pills .pill.active {
+	opacity: 1.0;
+}
+
+/*
+ * MAIN
+ */
+
+.main {
+	margin: 2em;
+	margin-left: 328px;
+	padding: 1.5em 0;
+}
+
+.main-hero {
+	margin-top: 1.5em;
+	padding-top: 0;
+}
+
+/*
+ * CATEGORY
+ */
+
+.category-hero-wrapper {
+	width: 50%;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.category-hero-wrapper a:link,
+.category-hero-wrapper a:visited {
+	font-family: 'GT-Sectra-Book-Italic';
+	color: rgb(255, 162, 0);
+}
+
+.category-about-content-wrapper {
+	width: 66.666%;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.category-about-sidebar-wrapper {
+	width: 33.333%;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.category {
+	border-top: 1px solid #000;
+	padding-top: 1em;
+	margin-bottom: 2em;
+}
+
+.category-hero-wrapper .category {
+	margin-left: 0.75em;
+	margin-right: 0.75em;
+}
+
+.category-hero-wrapper-first .category {
+	margin-left: 0;
+}
+
+.category-hero-wrapper-last .category {
+	margin-right: 0;
+}
+
+.category-content {
+	margin-right: 0.75em;
+}
+
+.category-sidebar {
+	margin-left: 0.75em;
+}
+
+.category h1,
+.category h2 {
+	font-weight: normal;
+}
+
+.category span {
+	font-family: 'GT-Sectra-Book-Italic';
+	font-size: 1.25em;
+}
+
+.category img {
+	width: 100%;
+	height: auto;
+}
+
+.category p {
+	line-height: 1.5em;
+}
+
+/*
+ * SECTION
+ */
+
+.main-section {
+	border-top: 1px solid #000;
+	padding: 0.5em 0;
+}
+.main-section-type {
+	display: inline-block;
+	vertical-align: top;
+	width: 30%;
+	font-size: 1.5em;
+	font-family: 'GT-Sectra-Book-Italic';
+}
+
+.main-section-content {
+	width: 70%;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.main-section-more,
+.main-section-less {
+	font-family: 'GT-Sectra-Book-Italic';
+	margin-top: 0.5em;
+	margin-bottom: 1.5em;
+}
+
+.main-section-more:hover,
+.main-section-less:hover {
+	cursor: pointer;
+}
+
+.main-section-more img,
+.main-section-less img {
+	width: 24px;
+	height: 24px;
+	vertical-align: middle;
+}
+
+.main-section-full {
+	max-height: 14em;
+	overflow: hidden;
+}
+
+.main-section h1 {
+	font-weight: normal;
+	margin: 0;
+	font-size: 1.5em;
+	font-family: 'GT-Sectra-Book-Italic';
+}
+
+.main-section p {
+	font-size: 1em;
+	line-height: 1.5em;
+}
+
+.main-section p:first-child {
+	margin-top: 0;
+}
+
+.main-section strong {
+	font-weight: normal;
+	margin: 0;
+	font-size: 1.5em;
+	line-height: 1.2em;
+	font-family: 'GT-Sectra-Book-Italic';
+}
+
+/*
+ * ABOUT
+ */
+
+.category-images-wrapper {
+	margin-top: 2em;
+	margin-left: -0.75em;
+	margin-right: -0.75em;
+}
+.about-image-wrapper {
+	width: 33.333%;
+}
+
+.about-image {
+	margin-left: 0.75em;
+	margin-right: 0.75em;
+	margin-bottom: 2em;
+}
+
+.about-image p {
+	margin-bottom: 0;
+	font-family: 'GT-Sectra-Book-Italic';
+}
+
+.about-image a:link,
+.about-image a:visited {
+	font-family: 'GT-Sectra-Book-Italic';
+	color: rgb(255, 162, 0);
+	font-size: 1.2em;
+}
+
+/*
+ * HIGHLIGHTS
+ */
+
+.highlights-wrapper {
+	margin-left: -0.75em;
+	margin-right: -0.75em;
+}
+
+.highlight-wrapper {
+	width: 50%;
+}
+
+.highlight {
+	border-top: 1px solid #000;
+	padding: 0.5em 0;
+	margin-left: 0.75em;
+	margin-right: 0.75em;
+}
+
+.highlight img {
+	width: 100%;
+	height: auto;
+}
+
+.highlight a:link,
+.highlight a:visited {
+	font-family: 'GT-Sectra-Book-Italic';
+	color: rgb(255, 162, 0);
+}
+
+.highlight-title {
+	font-size: 1.5em;
+	font-family: 'GT-Sectra-Book-Italic';
+}
+
+/*
+ * BOLIVIA
+ */
+
+.category-videos-wrapper {
+	margin-top: 2em;
+	margin-left: -0.75em;
+	margin-right: -0.75em;
+}
+
+.bolivia-video-wrapper {
+	width: 50%;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.bolivia-video {
+	border-top: 1px solid #000;
+	margin-left: 0.75em;
+	margin-right: 0.75em;
+	margin-bottom: 2em;
+}
+
+.bolivia-video h1 {
+	margin-top: 0.5em;
+	font-family: 'GT-Sectra-Book-Italic';
+	font-weight: normal;
+}
+
+.bolivia-video a:link {
+	font-family: 'GT-Sectra-Book-Italic';
+	color: rgb(255, 162, 0);
+	font-size: 1.2em;
+}
+
+.bolivia-video a:visited {
+	color: rgb(255, 162, 0);
+}
+
+/*
+ * LISTEN
+ */
+
+.listens-wrapper {
+	margin-left: -0.75em;
+	margin-right: -0.75em;
+}
+
+.listen-wrapper {
+	width: 50%;
+}
+
+.listen {
+	border-top: 1px solid #000;
+	padding: 0.5em 0;
+	margin-left: 0.75em;
+	margin-right: 0.75em;
+}
+
+.listen-caption {
+	margin-top: 0;
+	margin-bottom: 1.5em;
+	font-family: 'GT-Sectra-Book-Italic';
+}
+
+.listen img {
+	display: block;
+	width: 100%;
+	height: auto;
+	margin-top: 1.5em;
+	margin-bottom: 0.5em;
+}
+
+.listen audio {
+	width: 100%;
+}
+
+.listen-title {
+	font-size: 1.5em;
+	font-family: 'GT-Sectra-Book-Italic';
+}
+
+.listen-track {
+	margin-bottom: 1.5em;
+}
+
+.listen-track p {
+	margin: 0;
+}
+
+.listen-track .listen-section {
+	margin-bottom: 1.5em;
+}
+
+/*
+ * CONCERTS
+ */
+
+.concerts {
+	opacity: 1;
+}
+
+.future {
+	opacity: 1;
+}
+
+.main .concerts a:link,
+.main .concerts a:visited {
+	display: block;
+	font-size: 1em;
+	font-family: 'GT-Sectra-Book-Italic';
+	color: rgb(255, 162, 0);
+	margin-bottom: 1em;
+}
+
+/*
+ * CONTACT
+ */
+
+/*
+ * IMPRESSUM
+ */
+
+.main .impressum {
+	border-top: 1px solid #000;
+	padding: 0.5em 0;
+}
+
+.main .impressum a:link {
+	font-family: 'GT-Sectra-Book-Italic';
+}
+
+/*
+ * MOBILE
+ */
+
+@media (max-width: 768px), (max-device-width: 768px) {
+
+	/*
+	 * MENU
+	 */
+
+	.menu-wrapper {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+	}
+
+	.menu-wrapper .border-wrapper .toggle {
+		display: block;
+		position: absolute;
+		top: 0;
+		right: 0;
+		font-size: 1.5em;
+		line-height: 1rem;
+	}
+
+	.menu-wrapper .border-wrapper .toggle:hover {
+		cursor: pointer;
+	}
+
+	.menu-wrapper .border-wrapper .toggle .menu-expand {
+		display: none;
+	}
+
+	.menu-wrapper .border-wrapper .toggle .menu-collapse {
+		display: block;
+	}
+
+	.menu-wrapper.hidden .border-wrapper .toggle .menu-expand {
+		display: block;
+	}
+
+	.menu-wrapper.hidden .border-wrapper .toggle .menu-collapse {
+		display: none;
+	}
+
+	.menu-wrapper.hidden .border-wrapper {
+		margin-bottom: 1em;
+		padding-bottom: 0;
+		border-top: 1px solid #000;
+		border-bottom: 0;
+	}
+
+	.menu-wrapper.hidden .menu-menu-en-container,
+	.menu-wrapper.hidden .menu-menu-de-container {
+		display: none;
+	}
+
+	.menu-wrapper.hidden .lang {
+		display: none;
+	}
+
+	.menu-wrapper.hidden .social-icon {
+		display: none;
+	}
+
+	/*
+	 * HERO
+	 */
+
+	.hero {
+		height: 60vh;
+    margin-top: 5.5625em;
+    margin-bottom: -4em;
+	}
+
+	.hero .image-wrapper {
+		height: 60vh;
+	}
+
+	.hero .controls {
+		padding: 2.5em 1.5em;
+	}
+
+	/*
+	 * MAIN
+	 */
+
+	.main {
+		margin: 6em 2em 2em;
+	}
+}
+
+@media (max-width: 667px), (max-device-width: 667px) {
+
+	/*
+	 * CATEGORY
+	 */
+
+	.category-hero-wrapper {
+		width: 100%;
+		display: block;
+		vertical-align: top;
+	}
+
+	.category-about-content-wrapper {
+		width: 100%;
+		display: block;
+	}
+
+	.category-about-sidebar-wrapper {
+		width: 100%;
+		display: block;
+	}
+
+	.category-hero-wrapper .category {
+		margin: 0;
+	}
+
+	.category-content {
+		margin-right: 0;
+	}
+
+	.category-sidebar {
+		margin-left: 0;
+	}
+
+	/*
+	 * SECTION
+	 */
+
+	.main-section-type {
+		display: block;
+		width: 100%;
+	}
+
+	.main-section-content {
+		width: 100%;
+		display: block;
+	}
+
+	/*
+	 * ABOUT
+	 */
+
+	.about-image-wrapper {
+		width: 100%;
+	}
+
+	/*
+	 * HIGHLIGHTS
+	 */
+
+	.highlight-wrapper {
+		width: 100%;
+	}
+
+	/*
+	 * BOLIVIA
+	 */
+
+	.bolivia-video-wrapper {
+		width: 100%;
+		display: block;
+	}
+
+	/*
+	 * LISTEN
+	 */
+
+	.listen-wrapper {
+		width: 100%;
+	}
+
+}

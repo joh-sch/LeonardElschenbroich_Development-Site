@@ -1,0 +1,188 @@
+********************************************************************************
+* DUPLICATOR-LITE: Install-Log
+* STEP-1 START @ 04:54:57
+* VERSION: 1.3.10
+* NOTICE: Do NOT post to public sites or forums!!
+********************************************************************************
+PHP:		7.2.14 | SAPI: apache2handler
+PHP MEMORY:	4294967296 | SUHOSIN: disabled
+SERVER:		Apache/2.2.34 (Unix) mod_wsgi/3.5 Python/2.7.13 PHP/7.2.14 mod_ssl/2.2.34 OpenSSL/1.0.2o DAV/2 mod_fastcgi/mod_fastcgi-SNAP-0910052141 mod_perl/2.0.9 Perl/v5.24.0
+DOC ROOT:	/Volumes/Johannes_ExHD_1/Projects/Dev_19_1/Dev_1919_LeonardElschenbroich/LeonardElschenbroich_Development-Site
+DOC ROOT 755:	true
+LOG FILE 644:	true
+REQUEST URL:	http://localhost/dup-installer/main.installer.php
+SAFE MODE :	0
+CONFIG MODE :	NEW
+--------------------------------------
+PRE-EXTRACT-CHECKS
+--------------------------------------
+- PASS: Apache '.htaccess' not found - no backup needed.
+- PASS: Microsoft IIS 'web.config' not found - no backup needed.
+- PASS: WordFence '.user.ini' not found - no backup needed.
+--------------------------------------
+ARCHIVE SETUP
+--------------------------------------
+NAME:	16_09_2019_leonardelschenbroich_5a64be40f41c85388564_20190916165113_archive.zip
+SIZE:	265.14MB
+
+ZIP:	Shell Exec Unzip
+>>> Starting Shell-Exec Unzip:
+Command: unzip -o -qq '/Volumes/Johannes_ExHD_1/Projects/Dev_19_1/Dev_1919_LeonardElschenbroich/LeonardElschenbroich_Development-Site/16_09_2019_leonardelschenbroich_5a64be40f41c85388564_20190916165113_archive.zip' -d '/Volumes/Johannes_ExHD_1/Projects/Dev_19_1/Dev_1919_LeonardElschenbroich/LeonardElschenbroich_Development-Site' 2>&1
+<<< Shell-Exec Unzip Complete.
+--------------------------------------
+POST-EXTACT-CHECKS
+--------------------------------------
+PERMISSION UPDATES:
+    -DIRS:  '755'
+    -FILES: '644'
+
+STEP-1 COMPLETE @ 04:55:21 - RUNTIME: 23.6319 sec.
+
+
+
+********************************************************************************
+* DUPLICATOR-LITE INSTALL-LOG
+* STEP-2 START @ 04:57:25
+* NOTICE: Do NOT post to public sites or forums!!
+********************************************************************************
+--------------------------------------
+DATABASE-ENVIRONMENT
+--------------------------------------
+MYSQL VERSION:	This Server: 5.7.25 -- Build Server: 5.6.19
+FILE SIZE:	dup-database__5a64be4-16165113.sql (4.44MB)
+TIMEOUT:	5000
+MAXPACK:	4194304
+SQLMODE:	ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION
+NEW SQL FILE:	[/Volumes/Johannes_ExHD_1/Projects/Dev_19_1/Dev_1919_LeonardElschenbroich/LeonardElschenbroich_Development-Site/dup-installer/dup-installer-data__5a64be4-16165113.sql]
+COLLATE FB:	Off
+*** PHP Warning Message: count(): Parameter must be an array or an object that implements Countable (Code: 2, line 373 in /Volumes/Johannes_ExHD_1/Projects/Dev_19_1/Dev_1919_LeonardElschenbroich/LeonardElschenbroich_Development-Site/dup-installer/ctrls/ctrl.s2.dbinstall.php)
+--------------------------------------
+DATABASE RESULTS
+--------------------------------------
+DB VIEWS:	enabled
+DB PROCEDURES:	enabled
+ERRORS FOUND:	0
+DROPPED TABLES:	0
+RENAMED TABLES:	0
+QUERIES RAN:	22795
+
+ahc_browsers: (14)
+ahc_countries: (257)
+ahc_hits: (73)
+ahc_keywords: (10)
+ahc_recent_visitors: (10)
+ahc_refering_sites: (871)
+ahc_search_engine_crawlers: (16)
+ahc_search_engines: (5)
+ahc_searching_visits: (1346)
+ahc_title_traffic: (456)
+ahc_visitors: (1004)
+ahc_visits_time: (24)
+wp_commentmeta: (0)
+wp_comments: (1)
+wp_duplicator_packages: (0)
+wp_links: (0)
+wp_options: (143)
+wp_postmeta: (14480)
+wp_posts: (2471)
+wp_term_relationships: (1265)
+wp_term_taxonomy: (41)
+wp_termmeta: (0)
+wp_terms: (41)
+wp_usermeta: (28)
+wp_users: (1)
+Removed '27' cache/transient rows
+
+INSERT DATA RUNTIME: 2.2091 sec.
+STEP-2 COMPLETE @ 04:57:28 - RUNTIME: 2.6002 sec.
+
+
+
+********************************************************************************
+DUPLICATOR-LITE INSTALL-LOG
+STEP-3 START @ 04:57:33
+NOTICE: Do NOT post to public sites or forums
+********************************************************************************
+CHARSET SERVER:	utf8
+CHARSET CLIENT:	utf8
+
+--------------------------------------
+SERIALIZER ENGINE
+[*] scan every column
+[~] scan only text columns
+[^] no searchable columns
+--------------------------------------
+ahc_browsers~ (14)
+ahc_countries~ (257)
+ahc_hits~ (73)
+ahc_keywords~ (10)
+ahc_recent_visitors~ (10)
+ahc_refering_sites~ (871)
+ahc_search_engine_crawlers~ (16)
+ahc_search_engines~ (5)
+ahc_searching_visits~ (1346)
+ahc_title_traffic~ (456)
+ahc_visitors~ (1004)
+ahc_visits_time~ (24)
+wp_commentmeta^ (0)
+wp_comments~ (1)
+wp_duplicator_packages^ (0)
+wp_links^ (0)
+wp_options~ (143)
+wp_postmeta~ (14480)
+wp_posts~ (2471)
+wp_term_relationships~ (1265)
+wp_term_taxonomy~ (41)
+wp_termmeta^ (0)
+wp_terms~ (41)
+wp_usermeta~ (28)
+wp_users~ (1)
+--------------------------------------
+Search1:	'/kunden/470014_42657/rp-hosting/12435/leonard-elschenbroich.com' 
+Change1:	'/Volumes/Johannes_ExHD_1/Projects/Dev_19_1/Dev_1919_LeonardElschenbroich/LeonardElschenbroich_Development-Site' 
+Search2:	'\/kunden\/470014_42657\/rp-hosting\/12435\/leonard-elschenbroich.com' 
+Change2:	'\/Volumes\/Johannes_ExHD_1\/Projects\/Dev_19_1\/Dev_1919_LeonardElschenbroich\/LeonardElschenbroich_Development-Site' 
+Search3:	'%2Fkunden%2F470014_42657%2Frp-hosting%2F12435%2Fleonard-elschenbroich.com%2F' 
+Change3:	'%2FVolumes%2FJohannes_ExHD_1%2FProjects%2FDev_19_1%2FDev_1919_LeonardElschenbroich%2FLeonardElschenbroich_Development-Site%2F' 
+Search4:	'\kunden\470014_42657\rp-hosting\12435\leonard-elschenbroich.com' 
+Change4:	'/Volumes/Johannes_ExHD_1/Projects/Dev_19_1/Dev_1919_LeonardElschenbroich/LeonardElschenbroich_Development-Site' 
+Search5:	'\\kunden\\470014_42657\\rp-hosting\\12435\\leonard-elschenbroich.com' 
+Change5:	'\/Volumes\/Johannes_ExHD_1\/Projects\/Dev_19_1\/Dev_1919_LeonardElschenbroich\/LeonardElschenbroich_Development-Site' 
+Search6:	'%5Ckunden%5C470014_42657%5Crp-hosting%5C12435%5Cleonard-elschenbroich.com' 
+Change6:	'%2FVolumes%2FJohannes_ExHD_1%2FProjects%2FDev_19_1%2FDev_1919_LeonardElschenbroich%2FLeonardElschenbroich_Development-Site' 
+Search7:	'//leonard-elschenbroich.com' 
+Change7:	'//localhost:8888' 
+Search8:	'\/\/leonard-elschenbroich.com' 
+Change8:	'\/\/localhost:8888' 
+Search9:	'%2F%2Fleonard-elschenbroich.com' 
+Change9:	'%2F%2Flocalhost%3A8888' 
+Search10:	'https://localhost' 
+Change10:	'http://localhost' 
+Search11:	'https:\/\/localhost' 
+Change11:	'http:\/\/localhost' 
+Search12:	'https%3A%2F%2Flocalhost' 
+Change12:	'http%3A%2F%2Flocalhost' 
+SCANNED:	Tables:25 	|	 Rows:22557 	|	 Cells:136769 
+UPDATED:	Tables:1 	|	 Rows:1503 	|	 Cells:1541 
+ERRORS:		0 
+RUNTIME:	1.092500 sec
+
+====================================
+CONFIGURATION FILE UPDATES:
+====================================
+
+UPDATED WP-CONFIG ARK FILE:
+ - '/Volumes/Johannes_ExHD_1/Projects/Dev_19_1/Dev_1919_LeonardElschenbroich/LeonardElschenbroich_Development-Site/wp-config.php'
+- PASS: Successfully created a new .htaccess file.
+- PASS: Existing Apache 'htaccess.orig' was removed
+
+====================================
+NOTICES
+====================================
+
+No General Notices Found
+
+
+STEP-3 COMPLETE @ 04:57:35 - RUNTIME: 1.1377 sec. 
+
+
