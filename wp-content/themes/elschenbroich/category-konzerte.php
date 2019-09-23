@@ -11,8 +11,8 @@
 	</div>
 
 	<?php $today = date("Ymd"); ?>
-	<?php
 
+	<?php
 		// get posts
 		$posts = get_posts(array(
 			'category'			=> 'concerts',
@@ -21,6 +21,9 @@
 			'orderby'			=> 'meta_value_num',
 			'order'				=> 'ASC'
 		));
+
+		// reverse order (display latest concert first)
+		$posts = array_reverse($posts);
 
 		if( $posts ): ?>
 			<?php foreach( $posts as $post ):
@@ -47,7 +50,6 @@
 				</div>
 			<?php endforeach; ?>
 			<?php wp_reset_postdata();
-		endif;
+		endif; ?>
 
-	?>
 <?php get_footer(); ?>
