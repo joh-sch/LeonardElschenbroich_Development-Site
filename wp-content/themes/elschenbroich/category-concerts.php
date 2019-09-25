@@ -12,45 +12,37 @@
 
 	<?php $today = date("Ymd"); ?>
 	<?php
-
-		// get posts
-		$posts = get_posts(array(
-			'category'			=> 'concerts',
+		$args = array(
+			'cat' => 3,      
 			'posts_per_page'	=> -1,
-			'meta_key'			=> 'date',
+			'meta_key' => 'date',
 			'orderby'			=> 'meta_value_num',
-			'order'				=> 'ASC'
-		));
-
-		// reverse order (display latest concert first)
-		$posts = array_reverse($posts);
-
-		if( $posts ): ?>
-			<?php foreach( $posts as $post ):
-				setup_postdata( $post ); ?>
-				<?php $date = get_field('date', false, false); ?>
-				<div class="main-section concerts<?php if ($date - $today > 0) echo ' future'; ?>">
-					<div class="main-section-type">
-						<?php
-							$date = new DateTime($date);
-							echo $date->format('F jS');
-						?>, <?php echo get_field('hour'); ?>
-						<br />
-						<?php echo $date->format('Y'); ?>
-					</div><div class="main-section-content">
-						<h1><?php the_title(); ?></h1>
-						<?php the_content(); ?>
-            <?php
-              $link_url = get_field('link');
-              if ($link_url != ""): ?>
-                <a href="<?php echo get_field('link'); ?>">link</a>
-              <?php endif
-            ?>
-					</div>
-				</div>
-			<?php endforeach; ?>
-			<?php wp_reset_postdata();
-		endif;
-
+			'order' => 'DESC'
+		);
+		$loop = new WP_Query($args); 
 	?>
+
+	<?php while ($loop->have_posts()) : $loop->the_post(); ?>
+		<?php $date = get_field('date', false, false); ?>
+		<div class="main-section concerts<?php if ($date - $today > 0) echo ' future'; ?>">
+			<div class="main-section-type">
+				<?php
+					$date = new DateTime($date);
+					echo $date->format('F jS');
+				?>, <?php echo get_field('hour'); ?>
+				<br />
+				<?php echo $date->format('Y'); ?>
+			</div><div class="main-section-content">
+				<h1><?php the_title(); ?></h1>
+				<?php the_content(); ?>
+				<?php
+					$link_url = get_field('link');
+					if ($link_url != ""): ?>
+						<a href="<?php echo get_field('link'); ?>">link</a>
+					<?php endif
+				?>
+			</div>
+		</div>
+	<?php endwhile; ?>
+		
 <?php get_footer(); ?>
